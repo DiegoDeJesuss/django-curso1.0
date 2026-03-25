@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pacientes</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100 min-h-screen">
+        <!-- NAVBAR -->
+        <nav class="bg-white shadow">
+            <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+                <div class="flex items-center gap-8">
+                    <h1 class="text-xl font-bold text-blue-600">PsicoGestão</h1>
+                    <div class="flex gap-6 text-gray-600 text-sm">
+                        <a href="#" class="hover:text-blue-600 transition">Pacientes</a>
+                        <a href="#" class="hover:text-blue-600 transition">Sessões</a>
+                        <a href="#" class="hover:text-blue-600 transition">Agenda</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 bg-blue-600 text-white flex items-center justify-center rounded-full text-sm font-medium">A</div>
+                    <span class="text-sm text-gray-600">Dra. Ana</span>
+                </div>
+            </div>
+        </nav>
+        <!-- CONTEÚDO -->
+        <div class="max-w-7xl mx-auto p-8">
+            <h1 class="text-3xl font-bold mb-8">Pacientes</h1>
+            <div class="grid grid-cols-2 gap-8">
+                <!-- LISTA DE PACIENTES -->
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4">Lista de Pacientes</h2>
+                    <ul class="space-y-4">
+                        <li class="border rounded-lg p-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-medium">Maria Silva</p>
+                                <p class="text-sm text-gray-500">maria@email.com</p>
+                            </div>
+                            <span class="text-sm bg-purple-100 text-purple-700 px-3 py-1 rounded">Depressão</span>
+                        </li>
+                        <li class="border rounded-lg p-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-medium">João Pereira</p>
+                                <p class="text-sm text-gray-500">joao@email.com</p>
+                            </div>
+                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded">Ansiedade</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- FORMULÁRIO -->
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4">Cadastrar Paciente</h2>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Nome</label>
+                            <input type="text"
+                                   class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Email</label>
+                            <input type="email"
+                                   class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Queixa Principal</label>
+                            <select class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Selecione...</option>
+                                <option value="depressao">Depressão</option>
+                                <option value="ansiedade">Ansiedade</option>
+                            </select>
+                        </div>
+                        <button type="submit"
+                                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                            Cadastrar Paciente
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
