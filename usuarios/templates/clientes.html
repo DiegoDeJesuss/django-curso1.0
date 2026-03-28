@@ -1,11 +1,5 @@
 {% extends 'base.html' %}
 
-
-<!DOCTYPE html>
-<html lang="pt-br">
-   
-    <body class="bg-gray-100 min-h-screen">
-        
         <!-- CONTEÚDO -->
 
         {% block 'conteudo' %} 
@@ -35,23 +29,24 @@
                 <!-- FORMULÁRIO -->
                 <div class="bg-white rounded-xl shadow p-6">
                     <h2 class="text-xl font-semibold mb-4">Cadastrar Paciente</h2>
-                    <form class="space-y-4">
+                    <form class="space-y-4" action="{% url 'clientes' %}" method="POST">
+                         {% csrf_token %}
                         <div>
                             <label class="block text-sm font-medium mb-1">Nome</label>
-                            <input type="text"
+                            <input type="text" name="nome"
                                    class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-1">Email</label>
-                            <input type="email"
+                            <input type="email" name="email"
                                    class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-1">Queixa Principal</label>
-                            <select class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <select name="queixa" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 <option value="">Selecione...</option>
-                                <option value="depressao">Depressão</option>
-                                <option value="ansiedade">Ansiedade</option>
+                                <option value="D">Depressão</option>
+                                <option value="A">Ansiedade</option>
                             </select>
                         </div>
                         <button type="submit"
@@ -64,5 +59,4 @@
         </div>
 
         {% endblock  %}
-    </body>
-</html>
+
